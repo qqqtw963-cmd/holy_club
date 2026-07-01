@@ -1,41 +1,366 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HolyClub</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="wrap">
-      <section class="hero">
-        <div class="badge">HOLYCLUB</div>
-        <h1>하나님과 더 가까워지는 거룩한 습관</h1>
-        <p>
-          말씀, 기도, 루틴, 기록을 통해 매일의 신앙을 함께 세워가는 HolyClub.
-        </p>
-        <div class="actions">
-          <a href="https://api.holyclub.co.kr/openapi.json/" class="btn outline">API 보기</a>
-          <a href="#" class="btn">앱 준비중</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HolyClub | 하나님과 더 가까워지는 거룩한 습관</title>
+  <meta name="description" content="말씀, 기도, 묵상, 기록, 실천을 하나의 흐름으로 잇는 신앙 습관 앱 HolyClub.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="HolyClub 홈으로 이동">
+          <img class="brand-logo brand-logo--dark" src="assets/images/4dda290b-c6c2-4f69-8f2b-8b8f76f9415b.png" alt="HolyClub 로고">
+          <span class="brand-word">HolyClub</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" data-nav>
+          <a href="#story">이름의 의미</a>
+          <a href="#flow">왜 HolyClub</a>
+          <a href="#features">핵심 기능</a>
+          <a href="#experience">앱 경험</a>
+          <a class="nav-cta" href="#start">출시 소식 보기</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-orb hero-orb--one"></div>
+        <div class="hero-orb hero-orb--two"></div>
+        <div class="hero-grid container">
+          <div class="hero-copy" data-reveal>
+            <div class="eyebrow-pill">
+              <span class="eyebrow-dot"></span>
+              <span>하나님과 더 가까워지는 거룩한 습관</span>
+            </div>
+
+            <h1>거룩함은<br>거창한 결심보다<br>매일의 흐름에서 자랍니다</h1>
+            <p class="hero-lead">
+              HolyClub은 말씀, 기도, 묵상, 기록, 실천을 하나의 리듬으로 묶어
+              신앙의 하루가 흩어지지 않도록 돕는 조용한 동행 앱입니다.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#start">출시 소식 가장 먼저 보기</a>
+              <a class="button button-secondary" href="#features">핵심 기능 둘러보기</a>
+            </div>
+
+            <ul class="hero-proof" aria-label="HolyClub 핵심 가치">
+              <li>하루 3분부터 시작</li>
+              <li>말씀 · 기도 · 기록을 한 흐름으로</li>
+              <li>정죄보다 지속성을 돕는 설계</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <div class="phone-stage">
+              <div class="halo-ring"></div>
+              <div class="halo-card halo-card--verse">
+                <div class="mini-label">TODAY'S WORD</div>
+                <strong>시편 1:2</strong>
+                <p>“오직 여호와의 율법을 즐거워하여 그 율법을 주야로 묵상하는도다”</p>
+              </div>
+
+              <div class="phone phone--main">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="status-row">
+                    <span>9:41</span>
+                    <span>●●● ⌃ ▮</span>
+                  </div>
+
+                  <div class="phone-content">
+                    <div class="phone-header">
+                      <div class="mini-label">오늘의 거룩한 루틴</div>
+                      <h2>신앙의 하루를<br>한 화면에 담았습니다</h2>
+                      <p>오늘 읽을 말씀, 기도제목, 묵상 기록, 실천 체크까지 자연스럽게 이어집니다.</p>
+                    </div>
+
+                    <div class="verse-card">
+                      <span>오늘의 말씀 · 시편 1:2</span>
+                      <strong>“주야로 묵상하는도다”</strong>
+                    </div>
+
+                    <div class="task-stack">
+                      <article class="task-card task-card--done">
+                        <div class="task-icon">말</div>
+                        <div>
+                          <strong>말씀 읽기</strong>
+                          <p>오늘 본문을 이어 읽었습니다</p>
+                        </div>
+                        <span class="task-check">✓</span>
+                      </article>
+                      <article class="task-card">
+                        <div class="task-icon task-icon--gold">기</div>
+                        <div>
+                          <strong>기도하기</strong>
+                          <p>감사와 간구를 한 자리에 모읍니다</p>
+                        </div>
+                      </article>
+                      <article class="task-card">
+                        <div class="task-icon task-icon--green">묵</div>
+                        <div>
+                          <strong>묵상 기록</strong>
+                          <p>오늘 받은 은혜를 짧게 남깁니다</p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="halo-card halo-card--prayer">
+                <div class="mini-label">PRAYER NOTE</div>
+                <strong>응답까지 기억하는 기도</strong>
+                <p>기도제목을 쌓고, 응답을 기록하고, 다시 감사로 이어갑니다.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section">
-        <h2>서비스 소개</h2>
-        <p>
-          HolyClub은 성경 읽기, 기도, 신앙 루틴, 기록 기능을 통해
-          일상의 믿음을 지속하도록 돕는 서비스입니다.
-        </p>
+      <section class="proof-band">
+        <div class="container proof-grid" data-reveal>
+          <div>
+            <span class="section-label">ONE FLOW</span>
+            <strong>말씀 · 기도 · 묵상 · 기록 · 실천</strong>
+          </div>
+          <div>
+            <span class="section-label">HOLYCLUB SPIRIT</span>
+            <strong>정죄보다 지속성, 부담보다 반복</strong>
+          </div>
+          <div>
+            <span class="section-label">DAILY RHYTHM</span>
+            <strong>흩어진 신앙을 다시 한 화면으로</strong>
+          </div>
+        </div>
       </section>
 
-      <section class="section">
-        <h2>현재 상태</h2>
-        <ul>
-          <li>메인 사이트 준비 중</li>
-          <li>백엔드 API 운영 중</li>
-          <li>관리자 페이지 준비 중</li>
-        </ul>
+      <section class="story section" id="story">
+        <div class="container story-layout">
+          <div class="section-intro" data-reveal>
+            <span class="section-label">WHY “HOLYCLUB”</span>
+            <h2>300년 전 작은 모임에서<br>시작된 거룩한 습관</h2>
+            <p>
+              존 웨슬리와 초기 감리교도들은 함께 말씀을 읽고, 정해진 시간에 기도하고,
+              삶을 점검하는 반복적인 경건을 실천했습니다. 사람들은 그들을 ‘Holy Club’이라 불렀고,
+              그 별명은 결국 한 시대의 영성을 새롭게 하는 이름이 되었습니다.
+            </p>
+          </div>
+
+          <div class="story-cards">
+            <article class="info-card" data-reveal>
+              <span class="card-number">01</span>
+              <h3>규칙적인 경건</h3>
+              <p>기분이 아니라 정해진 리듬으로 하나님 앞에 머무는 삶.</p>
+            </article>
+            <article class="info-card" data-reveal>
+              <span class="card-number">02</span>
+              <h3>말씀과 기도 중심</h3>
+              <p>읽고, 묵상하고, 기도하는 일을 하루의 중심으로 세웠습니다.</p>
+            </article>
+            <article class="info-card" data-reveal>
+              <span class="card-number">03</span>
+              <h3>삶으로 이어지는 실천</h3>
+              <p>신앙이 책상 위 생각으로 끝나지 않도록 행동으로 연결했습니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="flow section section-tint" id="flow">
+        <div class="container">
+          <div class="section-intro section-intro--center" data-reveal>
+            <span class="section-label">THE PROBLEM &amp; THE FLOW</span>
+            <h2>신앙이 자꾸 끊기는 이유는<br>흩어져 있기 때문입니다</h2>
+            <p>
+              말씀은 따로, 기도제목은 따로, 묵상 기록은 또 따로 흩어져 있으면
+              결심은 쉽게 사라집니다. HolyClub은 그 조각들을 하나의 흐름으로 모읍니다.
+            </p>
+          </div>
+
+          <div class="compare-grid">
+            <article class="compare-card compare-card--soft" data-reveal>
+              <span class="section-label section-label--warm">흩어지는 신앙</span>
+              <ul>
+                <li>말씀은 다른 앱에서 읽고</li>
+                <li>기도제목은 메모장 어딘가에 남고</li>
+                <li>묵상은 기록하지 못한 채 지나가고</li>
+                <li>실천은 며칠 못 가 멈춰 버립니다</li>
+              </ul>
+            </article>
+
+            <article class="compare-card compare-card--deep" data-reveal>
+              <span class="section-label section-label--light">하나의 흐름, HolyClub</span>
+              <ul>
+                <li>읽고 — 오늘의 말씀으로 하루를 엽니다</li>
+                <li>기도하고 — 마음을 하나님께 올려드립니다</li>
+                <li>기록하고 — 받은 은혜를 붙잡아 둡니다</li>
+                <li>실천하며 — 다시 내일의 습관으로 이어집니다</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="features section" id="features">
+        <div class="container">
+          <div class="section-intro section-intro--center" data-reveal>
+            <span class="section-label">FIVE HABITS, ONE PLACE</span>
+            <h2>하루의 신앙을 잇는<br>다섯 가지 핵심 기능</h2>
+            <p>HolyClub은 많은 기능보다, 매일 다시 열게 만드는 꼭 필요한 기능에 집중합니다.</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature feature--large" data-reveal>
+              <div class="feature-icon">말씀</div>
+              <h3>성경 말씀</h3>
+              <p>오늘 읽을 본문을 자연스럽게 이어가고, 읽은 흐름이 끊기지 않도록 돕습니다.</p>
+              <span class="feature-tag">THE WORD</span>
+            </article>
+
+            <article class="feature feature--warm" data-reveal>
+              <div class="feature-icon">기도</div>
+              <h3>기도</h3>
+              <p>기도제목을 모으고, 응답을 기록하고, 감사로 다시 이어갑니다.</p>
+            </article>
+
+            <article class="feature feature--soft" data-reveal>
+              <div class="feature-icon">묵상</div>
+              <h3>묵상 · 기록</h3>
+              <p>하루의 은혜를 짧게 적어도 신앙의 흔적이 차곡차곡 남습니다.</p>
+            </article>
+
+            <article class="feature feature--soft" data-reveal>
+              <div class="feature-icon">루틴</div>
+              <h3>루틴 실천</h3>
+              <p>내게 맞는 거룩한 루틴을 정하고, 가볍게 체크하며 반복하게 합니다.</p>
+            </article>
+
+            <article class="feature feature--deep" data-reveal>
+              <div class="feature-icon feature-icon--light">지속</div>
+              <h3>신앙의 지속성</h3>
+              <p>놓친 날이 있어도 다시 오늘부터 이어갈 수 있도록 부드럽게 격려합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience section" id="experience">
+        <div class="container experience-layout">
+          <div class="section-intro" data-reveal>
+            <span class="section-label">THE EXPERIENCE</span>
+            <h2>복잡하지 않게,<br>매일 열고 싶게</h2>
+            <p>HolyClub은 기능을 늘리기보다, 사용자가 매일 다시 열고 싶은 조용한 감각을 만듭니다.</p>
+
+            <div class="experience-points">
+              <article>
+                <strong>조용하고 평안한 화면</strong>
+                <p>과한 자극 대신 맑은 여백과 차분한 타이포로 오늘의 루틴에 집중하게 합니다.</p>
+              </article>
+              <article>
+                <strong>하루 3분이면 시작 가능</strong>
+                <p>말씀 한 구절, 짧은 기도, 한 줄 기록만으로도 신앙의 흐름이 이어집니다.</p>
+              </article>
+              <article>
+                <strong>습관처럼 다시 열게 되는 구조</strong>
+                <p>쌓여가는 기록과 루틴 체크가 어제와 오늘을 연결해 줍니다.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="floating-ui" data-reveal>
+            <div class="mini-phone mini-phone--left">
+              <div class="mini-phone__screen">
+                <span class="mini-label">PRAYER</span>
+                <strong>기도제목</strong>
+                <ul>
+                  <li>가족의 평안을 위하여</li>
+                  <li>공동체를 위한 기도</li>
+                  <li>응답된 기도 3개 기록</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mini-phone mini-phone--right">
+              <div class="mini-phone__screen mini-phone__screen--deep">
+                <span class="mini-label mini-label--light">JOURNAL</span>
+                <strong>오늘의 은혜</strong>
+                <p>“바쁜 하루였지만 이 한 구절 앞에 잠시 멈췄다.”</p>
+                <div class="mini-cta">+ 오늘의 기록 남기기</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-band">
+        <div class="container quote-band__inner" data-reveal>
+          <span class="section-label section-label--light">OUR PROMISE</span>
+          <h2>더 많은 기능이 아니라,<br>더 깊은 지속성을 추구합니다</h2>
+          <p>거룩함은 거창한 결심이 아니라 매일의 반복에서 자랍니다. HolyClub은 그 반복이 외롭지 않도록 함께합니다.</p>
+        </div>
+      </section>
+
+      <section class="cta section" id="start">
+        <div class="container cta-panel" data-reveal>
+          <div class="cta-copy">
+            <img class="cta-logo" src="assets/images/4dda290b-c6c2-4f69-8f2b-8b8f76f9415b.png" alt="HolyClub">
+            <span class="section-label">COMING SOON</span>
+            <h2>오늘, 거룩한 습관을<br>다시 시작해 보세요</h2>
+            <p>HolyClub은 출시 준비 중입니다. 말씀과 기도와 기록이 이어지는 신앙의 흐름을 곧 만나보실 수 있습니다.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="button button-primary" href="#top">첫 화면 다시 보기</a>
+            <a class="button button-secondary" href="#story">HolyClub의 의미 보기</a>
+            <div class="cta-note">출시 준비 중 · 브랜드/카피/랜딩 구조는 계속 다듬을 수 있습니다.</div>
+          </div>
+        </div>
       </section>
     </main>
-  </body>
+
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <div class="footer-brand">
+          <div class="brand brand--footer">
+            <img class="brand-logo brand-logo--light" src="assets/images/fc790327-8469-493a-ac9a-c27fb7d9575f.png" alt="HolyClub 로고">
+            <span class="brand-word">HolyClub</span>
+          </div>
+          <p>말씀 · 기도 · 묵상 · 기록 · 실천을 하나의 흐름으로 잇는 신앙 습관 앱.</p>
+          <span class="footer-motto">BE HOLY TOGETHER</span>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <span class="footer-label">SERVICE</span>
+            <a href="#story">이름의 의미</a>
+            <a href="#features">핵심 기능</a>
+            <a href="#start">출시 안내</a>
+          </div>
+          <div>
+            <span class="footer-label">FLOW</span>
+            <a href="#flow">왜 HolyClub</a>
+            <a href="#experience">앱 경험</a>
+            <a href="#top">맨 위로</a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 HolyClub. All rights reserved.</span>
+        <span>“주야로 묵상하는도다” — 시편 1:2</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
