@@ -687,6 +687,37 @@ button {
   color: var(--text-muted);
 }
 
+.flow-shell {
+  max-width: 1086px;
+}
+
+.flow-intro {
+  max-width: 780px;
+  margin-bottom: 54px;
+}
+
+.flow-intro h2 {
+  font-size: clamp(40px, 4.9vw, 62px);
+  line-height: 1.22;
+  letter-spacing: -0.05em;
+  color: var(--brand-ink);
+}
+
+.flow-intro p {
+  max-width: 660px;
+  margin: 0 auto;
+  font-size: clamp(16px, 1.8vw, 18px);
+  line-height: 1.92;
+  color: #577086;
+}
+
+.flow-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
 .compare-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -694,9 +725,16 @@ button {
 }
 
 .compare-card {
-  padding: 34px;
-  border-radius: 30px;
-  min-height: 100%;
+  padding: 36px 34px 34px;
+  border-radius: 28px;
+  min-height: 228px;
+}
+
+.compare-card .section-label {
+  margin-bottom: 18px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: none;
 }
 
 .compare-card ul {
@@ -704,52 +742,75 @@ button {
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .compare-card li {
   position: relative;
-  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  min-height: 26px;
+  padding-left: 30px;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
 }
 
 .compare-card li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 12px;
-  width: 10px;
-  height: 10px;
-  border-radius: 3px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  transform: translateY(-50%);
 }
 
 .compare-card--soft {
-  background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(252,246,236,0.88));
+  background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,251,245,0.94));
   border: 1px solid rgba(212, 176, 106, 0.18);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 28px 56px -42px rgba(22, 52, 82, 0.28);
+}
+
+.compare-card--soft .section-label {
+  color: #bb914f;
 }
 
 .compare-card--soft li {
-  color: #5f7180;
+  color: #6a7d8f;
 }
 
 .compare-card--soft li::before {
-  background: rgba(212, 176, 106, 0.68);
+  background: rgba(221, 189, 132, 0.88);
 }
 
 .compare-card--deep {
-  background: linear-gradient(160deg, #2d6ea7 0%, #16334b 100%);
+  background: linear-gradient(160deg, #4788c9 0%, #2e669d 100%);
   color: #fff;
-  box-shadow: 0 32px 60px -34px rgba(28, 61, 90, 0.9);
+  box-shadow: 0 34px 64px -36px rgba(39, 87, 135, 0.9);
+}
+
+.compare-card--deep .section-label {
+  color: rgba(226, 238, 251, 0.94);
 }
 
 .compare-card--deep li {
-  color: rgba(255,255,255,0.88);
+  color: rgba(255,255,255,0.95);
 }
 
 .compare-card--deep li::before {
-  background: rgba(255, 255, 255, 0.85);
+  content: '✓';
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .feature-grid {
@@ -1165,7 +1226,7 @@ button {
 
 @media (max-width: 860px) {
   .site-header {
-    padding: 14px 0;
+    padding: 12px 0;
   }
 
   .nav-toggle {
@@ -1174,9 +1235,9 @@ button {
 
   .site-nav {
     position: absolute;
-    top: calc(100% + 8px);
-    left: 20px;
-    right: 20px;
+    top: calc(100% + 10px);
+    left: 16px;
+    right: 16px;
     display: none;
     flex-direction: column;
     align-items: stretch;
@@ -1208,19 +1269,25 @@ button {
   }
 
   .hero {
-    padding-top: 20px;
+    padding-top: 14px;
   }
 
   .hero-copy h1 {
-    font-size: clamp(40px, 12vw, 62px);
+    font-size: clamp(36px, 10.5vw, 54px);
+  }
+
+  .hero-lead {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 26px;
   }
 
   .phone {
-    width: min(100%, 340px);
+    width: min(100%, 330px);
   }
 
   .halo-card {
-    max-width: 190px;
+    max-width: 180px;
   }
 }
 
@@ -1230,14 +1297,61 @@ button {
   }
 
   .section {
-    padding: 74px 0;
+    padding: 64px 0;
+  }
+
+  .section-intro h2,
+  .quote-band h2,
+  .cta-copy h2 {
+    font-size: clamp(28px, 8vw, 36px);
+    margin-bottom: 16px;
+  }
+
+  .section-intro p,
+  .quote-band p,
+  .cta-copy p,
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .flow-intro {
+    margin-bottom: 34px;
+  }
+
+  .flow-intro h2 {
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1.34;
+  }
+
+  .flow-intro p {
+    font-size: 15px;
+    line-height: 1.82;
   }
 
   .brand-word {
     font-size: 20px;
   }
 
-  .hero-actions,
+  .hero {
+    padding: 12px 0 72px;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .eyebrow-pill {
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
   .cta-actions {
     grid-template-columns: 1fr;
   }
@@ -1250,22 +1364,53 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .hero-proof li {
+    padding: 15px 16px;
+    font-size: 12.5px;
+  }
+
   .hero-visual {
-    min-height: 680px;
+    min-height: 610px;
   }
 
   .phone {
-    inset: 100px 50% auto auto;
+    inset: 76px 50% auto auto;
     transform: translateX(50%);
-    width: min(100%, 310px);
+    width: min(100%, 282px);
   }
 
   .phone-screen {
-    min-height: 590px;
+    min-height: 540px;
+  }
+
+  .phone-content {
+    padding: 24px 18px 20px;
   }
 
   .phone-header h2 {
-    font-size: 26px;
+    font-size: 24px;
+  }
+
+  .phone-header p {
+    font-size: 13px;
+    line-height: 1.68;
+  }
+
+  .task-card {
+    grid-template-columns: 36px minmax(0, 1fr) 24px;
+    gap: 12px;
+    padding: 13px;
+  }
+
+  .task-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+  }
+
+  .task-check {
+    width: 24px;
+    height: 24px;
   }
 
   .halo-card {
@@ -1278,7 +1423,20 @@ button {
   .feature,
   .experience-points article,
   .cta-panel {
-    padding: 24px;
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .compare-card .section-label {
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+
+  .compare-card li {
+    min-height: 24px;
+    padding-left: 28px;
+    font-size: 15px;
+    line-height: 1.68;
   }
 
   .floating-ui {
@@ -1299,7 +1457,73 @@ button {
     min-height: auto;
   }
 
+  .footer-layout {
+    gap: 28px;
+  }
+
+  .footer-links {
+    width: 100%;
+    gap: 24px;
+  }
+
   .footer-bottom {
+    margin-top: 32px;
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: min(var(--container), calc(100% - 22px));
+  }
+
+  .header-inner {
+    gap: 10px;
+  }
+
+  .brand-word {
+    font-size: 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(32px, 10vw, 40px);
+  }
+
+  .flow-intro h2 {
+    font-size: clamp(26px, 9vw, 34px);
+  }
+
+  .flow-intro p br {
+    display: none;
+  }
+
+  .hero {
+    padding-bottom: 64px;
+  }
+
+  .hero-visual {
+    min-height: 570px;
+  }
+
+  .phone {
+    width: min(100%, 266px);
+  }
+
+  .phone-screen {
+    min-height: 510px;
+  }
+
+  .proof-grid > div,
+  .info-card,
+  .compare-card,
+  .feature,
+  .experience-points article,
+  .cta-panel {
+    padding: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
   }
 }
