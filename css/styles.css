@@ -1043,99 +1043,6 @@ button {
   color: rgba(232, 242, 250, 0.82);
 }
 
-.app-connect-shell {
-  display: grid;
-  gap: 34px;
-}
-
-.app-connect-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.app-connect-card {
-  display: grid;
-  gap: 14px;
-  padding: 28px 24px;
-  border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.96);
-  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(245,250,255,0.9));
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
-}
-
-.app-connect-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(77, 144, 207, 0.22);
-}
-
-.app-connect-card h3 {
-  margin: 0;
-  font-size: 24px;
-  line-height: 1.35;
-  color: var(--brand-ink);
-}
-
-.app-connect-card p {
-  margin: 0;
-  color: var(--text-muted);
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.app-connect-card strong {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  max-width: 100%;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(34, 93, 149, 0.08);
-  color: var(--brand-deep);
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  word-break: break-all;
-}
-
-.app-connect-card--deep {
-  background: linear-gradient(180deg, rgba(16,34,50,0.96), rgba(24,51,76,0.96));
-  border-color: rgba(130, 173, 211, 0.16);
-  box-shadow: var(--shadow-lg);
-}
-
-.app-connect-card--deep h3,
-.app-connect-card--deep p {
-  color: #f4f8fc;
-}
-
-.app-connect-card--deep p {
-  color: rgba(232, 242, 250, 0.78);
-}
-
-.app-connect-card--deep strong {
-  background: rgba(185, 215, 241, 0.14);
-  color: #d7e9f8;
-}
-
-.app-connect-helper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 22px 24px;
-  border-radius: 24px;
-  border: 1px solid rgba(26, 58, 87, 0.08);
-  background: rgba(255,255,255,0.76);
-}
-
-.app-connect-helper p {
-  margin: 0;
-  color: var(--text-muted);
-  font-size: 15px;
-}
-
 .cta-panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -1280,8 +1187,7 @@ button {
   .proof-grid,
   .story-cards,
   .compare-grid,
-  .feature-grid,
-  .app-connect-grid {
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1315,11 +1221,6 @@ button {
 
   .cta-actions {
     justify-items: stretch;
-  }
-
-  .app-connect-helper {
-    align-items: flex-start;
-    flex-direction: column;
   }
 }
 
@@ -1521,7 +1422,6 @@ button {
   .compare-card,
   .feature,
   .experience-points article,
-  .app-connect-card,
   .cta-panel {
     padding: 22px;
     border-radius: 22px;
@@ -1618,7 +1518,6 @@ button {
   .compare-card,
   .feature,
   .experience-points article,
-  .app-connect-card,
   .cta-panel {
     padding: 20px;
   }

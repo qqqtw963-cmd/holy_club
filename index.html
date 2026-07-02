@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-api-base-url="https://api.holyclub.co.kr">
   <div class="site-shell">
     <header class="site-header" data-header>
       <div class="container header-inner">
@@ -28,7 +28,7 @@
           <a href="#flow">왜 HolyClub</a>
           <a href="#features">핵심 기능</a>
           <a href="#experience">앱 경험</a>
-          <a class="nav-cta" href="open-app.html?target=home">앱으로 시작하기</a>
+          <a class="nav-cta" href="#start">출시 소식 보기</a>
         </nav>
       </div>
     </header>
@@ -41,17 +41,17 @@
           <div class="hero-copy" data-reveal>
             <div class="eyebrow-pill">
               <span class="eyebrow-dot"></span>
-              <span>하나님과 더 가까워지는 거룩한 습관</span>
+              <span data-home-eyebrow>하나님과 더 가까워지는 거룩한 습관</span>
             </div>
 
-            <h1>거룩함은<br>거창한 결심보다<br>매일의 흐름에서 자랍니다</h1>
-            <p class="hero-lead">
+            <h1 data-home-title>거룩함은<br>거창한 결심보다<br>매일의 흐름에서 자랍니다</h1>
+            <p class="hero-lead" data-home-subtitle>
               HolyClub은 말씀, 기도, 묵상, 기록, 실천을 하나의 리듬으로 묶어
               신앙이 습관이 되고 훈련이 되도록 돕는 조용한 동행 앱입니다.
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="open-app.html?target=home">앱으로 시작하기</a>
+              <a class="button button-primary" href="#start" data-home-cta>출시 소식 가장 먼저 보기</a>
               <a class="button button-secondary" href="#features">핵심 기능 둘러보기</a>
             </div>
 
@@ -142,6 +142,24 @@
           <div>
             <span class="section-label">DAILY RHYTHM</span>
             <strong>작은 반복이 거룩한 습관이 됩니다</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint" id="notices">
+        <div class="container">
+          <div class="section-intro section-intro--center" data-reveal>
+            <span class="section-label">LIVE NOTICE</span>
+            <h2>HolyClub 최신 소식</h2>
+            <p>관리자에서 등록한 공지 중 최근 소식을 바로 보여줍니다.</p>
+          </div>
+
+          <div class="feature-grid" data-live-notices>
+            <article class="feature feature--soft" data-reveal>
+              <div class="feature-icon">안내</div>
+              <h3>출시 소식을 준비 중입니다</h3>
+              <p>관리자 페이지에서 공지를 등록하면 이 영역에 자동으로 반영됩니다.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -303,50 +321,6 @@
         </div>
       </section>
 
-      <section class="app-connect section" id="app-connect">
-        <div class="container app-connect-shell">
-          <div class="section-intro section-intro--center" data-reveal>
-            <span class="section-label">OPEN THE APP</span>
-            <h2>웹에서 보던 흐름을<br>앱에서 바로 이어가세요</h2>
-            <p>
-              HolyClub 앱이 설치되어 있다면 아래 버튼으로 바로 열 수 있습니다.<br>
-              아직 설치 전이라면 앱 오픈 페이지에서 설치·출시 안내로 자연스럽게 이어집니다.
-            </p>
-          </div>
-
-          <div class="app-connect-grid">
-            <a class="app-connect-card" href="open-app.html?target=home" data-reveal>
-              <span class="section-label">HOME</span>
-              <h3>앱 홈 열기</h3>
-              <p>오늘의 루틴과 말씀 흐름이 모인 첫 화면으로 바로 이동합니다.</p>
-              <strong>holyclub://home</strong>
-            </a>
-
-            <a class="app-connect-card app-connect-card--deep" href="open-app.html?target=prayer-timer" data-reveal>
-              <span class="section-label section-label--light">PRAYER TIMER</span>
-              <h3>기도 루틴 바로 시작</h3>
-              <p>기도 타이머 화면으로 이동해 짧은 기도 루틴을 바로 이어갈 수 있습니다.</p>
-              <strong>holyclub://prayer/timer</strong>
-            </a>
-
-            <a class="app-connect-card" href="open-app.html?target=profile" data-reveal>
-              <span class="section-label">PROFILE</span>
-              <h3>내 기록 흐름 열기</h3>
-              <p>프로필과 저녁 흐름 쪽으로 이동해 쌓인 기록과 루틴을 다시 확인합니다.</p>
-              <strong>holyclub://profile</strong>
-            </a>
-          </div>
-
-          <div class="app-connect-helper" data-reveal>
-            <div>
-              <span class="section-label">MOBILE FIRST</span>
-              <p>아이폰에서는 앱 열기를 먼저 시도하고, 앱이 없으면 설치/출시 안내로 넘어가도록 연결했습니다.</p>
-            </div>
-            <a class="button button-secondary" href="open-app.html?target=home">앱 오픈 페이지 보기</a>
-          </div>
-        </div>
-      </section>
-
       <section class="quote-band">
         <div class="container quote-band__inner" data-reveal>
           <span class="section-label section-label--light">OUR PROMISE</span>
@@ -359,14 +333,14 @@
         <div class="container cta-panel" data-reveal>
           <div class="cta-copy">
             <img class="cta-logo" src="assets/images/4dda290b-c6c2-4f69-8f2b-8b8f76f9415b.png" alt="HolyClub">
-            <span class="section-label">APP ENTRY</span>
-            <h2>오늘, 거룩한 습관을<br>앱에서 다시 시작해 보세요</h2>
-            <p>HolyClub 웹에서 보던 흐름을 앱으로 바로 이어갈 수 있도록 연결했습니다. 앱이 설치되어 있으면 바로 열리고, 아직 없으면 설치/출시 안내로 이어집니다.</p>
+            <span class="section-label">COMING SOON</span>
+            <h2>오늘, 거룩한 습관을<br>다시 시작해 보세요</h2>
+            <p>HolyClub은 출시 준비 중입니다. 말씀과 기도와 기록이 이어지는 신앙의 흐름을 곧 만나보실 수 있습니다.</p>
           </div>
           <div class="cta-actions">
-            <a class="button button-primary" href="open-app.html?target=home">앱 홈 열기</a>
-            <a class="button button-secondary" href="open-app.html?target=prayer-timer">기도 루틴 열기</a>
-            <div class="cta-note">현재는 앱 오픈 브릿지 페이지 기준으로 연결되어 있으며, 다음 단계에서 App Store / Universal Link까지 확장할 수 있습니다.</div>
+            <a class="button button-primary" href="#top">첫 화면 다시 보기</a>
+            <a class="button button-secondary" href="#story">HolyClub의 의미 보기</a>
+            <div class="cta-note">출시 준비 중 · 브랜드/카피/랜딩 구조는 계속 다듬을 수 있습니다.</div>
           </div>
         </div>
       </section>
