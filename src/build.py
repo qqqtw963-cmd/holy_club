@@ -8,7 +8,8 @@ def icon(m):
     s = re.sub(r"\s+", " ", s).replace("> <", "><").strip()
     s = s.replace('width="24" height="24" ', "").replace("<svg ", '<svg aria-hidden="true" focusable="false" ', 1)
     return s
-out = re.sub(r"\{\{i:([a-z-]+)\}\}", icon, (R / "index.template.html").read_text())
+tpl = sys.argv[2] if len(sys.argv) > 2 else "index.template.html"
+out = re.sub(r"\{\{i:([a-z-]+)\}\}", icon, (R / tpl).read_text())
 target = R.parent / (sys.argv[1] if len(sys.argv) > 1 else "index.html")
 target.write_text(out)
 print("wrote", target)
