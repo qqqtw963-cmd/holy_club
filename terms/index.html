@@ -1,75 +1,11 @@
 <!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>홀리클럽 서비스 이용약관</title>
-<meta name="description" content="홀리클럽 서비스 이용약관 — 홀리클럽(HolyClub), 운영자 에이엔에이치(A&amp;H)">
-
-<style>
-:root{--bg:#f4f8fc;--surface:#ffffff;--fg:#132433;--mut:#5d7284;--line:rgba(26,58,87,.12);--soft:#eaf2fb;--pri:#225d95;--btn:#4d90cf;--edge:#225d95;--navy:#101f2c;
---mark:#FFF1B8;--markfg:#5C4500;--warnbg:#FDECEE;--warnfg:#93291F;--warnline:#F3C9C3;
---font:"Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;--serif:"Gowun Batang","Nanum Myeongjo","AppleMyungjo",serif}
-*{box-sizing:border-box}
-html{scroll-padding-top:16px}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.8;word-break:keep-all;overflow-wrap:anywhere;-webkit-text-size-adjust:100%}
-a{color:var(--pri)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--pri);outline-offset:2px;border-radius:4px}
-.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:8px;background:var(--surface);padding:6px 10px;z-index:9}
-.top{border-bottom:1px solid var(--line);background:var(--surface)}
-.top .in{max-width:760px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:20px;color:#15314a;text-decoration:none}
-.brand img{width:30px;height:30px;object-fit:contain}
-.top nav{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:14px}
-.top nav a{color:var(--mut);text-decoration:none}
-.top nav a[aria-current]{color:var(--pri);font-weight:700}
-.review{background:var(--mark);color:var(--markfg);font-size:14px;line-height:1.6}
-.review .in{max-width:760px;margin:0 auto;padding:10px 16px}
-main{max-width:760px;margin:0 auto;padding:32px 16px 72px}
-h1{font-family:var(--serif);font-size:clamp(25px,6vw,32px);line-height:1.35;letter-spacing:-.02em;margin:0 0 6px;text-wrap:balance}
-.meta{color:var(--mut);font-size:14px;margin:0 0 24px}
-h2{font-size:19px;letter-spacing:-.01em;line-height:1.45;margin:40px 0 12px;padding-top:24px;border-top:1px solid var(--line)}
-h3{font-size:16px;margin:24px 0 6px}
-p{margin:0 0 12px}
-ul,ol{margin:0 0 12px;padding-left:22px}
-li{margin:3px 0}
-.tw{overflow-x:auto;margin:0 0 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
-table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.65}
-th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line)}
-tr:last-child td{border-bottom:0}
-th{background:var(--soft);font-weight:700;white-space:nowrap}
-td:first-child{font-weight:600;min-width:8em}
-mark{background:var(--mark);color:var(--markfg);padding:0 4px;border-radius:4px}
-.summary{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:grid;gap:12px;margin:0 0 8px}
-.summary .row{display:grid;gap:2px}
-.summary b{font-size:13.5px;color:var(--pri)}
-.toc{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin:20px 0 0}
-.toc b{display:block;font-size:14px;margin-bottom:6px}
-.toc ol{margin:0;padding-left:0;list-style:none;columns:2 240px;column-gap:24px;font-size:14.5px}
-.toc a{color:var(--mut);text-decoration:none}.toc a:hover{color:var(--fg);text-decoration:underline}
-.cta{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:12px;margin:8px 0 16px}
-.btn{display:block;text-align:center;background:var(--btn);color:#fff;text-decoration:none;font-weight:700;font-size:16px;padding:14px 16px;border-radius:999px;box-shadow:0 14px 30px -18px rgba(34,93,149,.7)}
-.btn:hover{background:var(--edge)}
-.addr{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:15px}
-.copy{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:10px;padding:6px 12px;cursor:pointer}
-.warn{background:var(--warnbg);color:var(--warnfg);border:1px solid var(--warnline);border-radius:12px;padding:14px 16px;margin:4px 0 16px}
-.note{background:var(--soft);border-radius:12px;padding:14px 16px;font-size:14px;margin:16px 0}
-.footer{margin-top:40px;color:var(--mut);font-size:14px;border-top:1px solid var(--line);padding-top:16px}
-.foot{background:var(--navy);color:#8da4b8}
-.foot .in{max-width:760px;margin:0 auto;padding:32px 16px 40px;font-size:13.5px;color:#8da4b8;display:grid;gap:12px}
-.foot nav{display:flex;gap:4px 16px;flex-wrap:wrap}
-.foot a{color:#b6c7d4}.foot a:hover{color:#fff}
-@media print{.top nav,.foot,.review,.copy{display:none}body{background:#fff}}
-</style>
-</head>
-<body>
-<a class="skip" href="#main">본문으로 건너뛰기</a>
-<header class="top"><div class="in"><a class="brand" href="/"><img src="/assets/images/4dda290b-c6c2-4f69-8f2b-8b8f76f9415b.png" alt="">HolyClub</a><nav aria-label="안내 페이지"><a href="/privacy/">개인정보처리방침</a><a href="/terms/" aria-current="page">이용약관</a><a href="/support/">고객 지원</a><a href="/delete-account/">계정 삭제 요청</a></nav></div></header>
-
-<main id="main">
-<h1>홀리클럽 서비스 이용약관</h1>
-<p class="meta">버전 v1.0 · 운영자 에이엔에이치(A&amp;H)</p>
-<nav class="toc" aria-label="목차"><b>목차</b><ol><li><a href="#t1">제1조 목적</a></li><li><a href="#t2">제2조 용어</a></li><li><a href="#t3">제3조 약관의 게시와 변경</a></li><li><a href="#t4">제4조 가입과 연령</a></li><li><a href="#t5">제5조 로그인과 계정 관리</a></li><li><a href="#t6">제6조 제공하는 기능과 요금</a></li><li><a href="#t7">제7조 교회 · 그룹과 역할</a></li><li><a href="#t8">제8조 기존 자녀 루틴</a></li><li><a href="#t9">제9조 회원의 의무</a></li><li><a href="#t10">제10조 기록과 게시물</a></li><li><a href="#t11">제11조 신고 · 차단과 이용 제한</a></li><li><a href="#t12">제12조 개인정보와 별도 동의</a></li><li><a href="#t13">제13조 회원 탈퇴와 계정 삭제</a></li><li><a href="#t14">제14조 알림과 고객 지원</a></li><li><a href="#t15">제15조 서비스 변경 · 중단과 책임</a></li><li><a href="#t16">제16조 준거법과 분쟁 해결</a></li></ol></nav><h2 id="t1">제1조 목적</h2>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>홀리클럽 서비스 이용약관 | HolyClub</title><meta name="description" content="HolyClub 공식 이용 및 개인정보 안내. 운영자 에이엔에이치(A&amp;H).">
+<meta name="robots" content="index,follow"><meta name="theme-color" content="#4526e8">
+<meta name="holyclub:body-sha256" content="35a99e6bf55d53a73679acf0c25891d33896d1d6f2eb480e9c7fc61fa87ec4bb"><link rel="stylesheet" href="/assets/legal-v1.1/legal.css">
+</head><body><a class="skip" href="#legal-body">본문으로 바로가기</a>
+<header><div class="header-inner"><a class="brand" href="/"><img src="/assets/legal-v1.1/holyclub-logo.svg" alt="" width="32" height="32"><span>HOLYCLUB<small>BE HOLY TOGETHER</small></span></a><nav aria-label="공식 안내"><a href="/privacy">개인정보처리방침</a><a href="/terms">이용약관</a><a href="/support">고객지원</a><a href="/delete-account">계정 삭제 요청</a></nav></div></header>
+<main><div class="page-kicker">HOLYCLUB · v1.1</div><h1>홀리클럽 서비스 이용약관</h1><details class="toc"><summary>목차 · 16개 조항</summary><nav aria-label="조항 바로가기"><ol><li><a href="#t1">제1조 목적</a></li><li><a href="#t2">제2조 용어</a></li><li><a href="#t3">제3조 약관의 게시와 변경</a></li><li><a href="#t4">제4조 가입과 연령</a></li><li><a href="#t5">제5조 로그인과 계정 관리</a></li><li><a href="#t6">제6조 제공하는 기능과 요금</a></li><li><a href="#t7">제7조 교회 · 그룹과 역할</a></li><li><a href="#t8">제8조 기존 자녀 루틴</a></li><li><a href="#t9">제9조 회원의 의무</a></li><li><a href="#t10">제10조 기록과 게시물</a></li><li><a href="#t11">제11조 신고 · 차단과 이용 제한</a></li><li><a href="#t12">제12조 개인정보와 별도 동의</a></li><li><a href="#t13">제13조 회원 탈퇴와 계정 삭제</a></li><li><a href="#t14">제14조 알림과 고객 지원</a></li><li><a href="#t15">제15조 서비스 변경 · 중단과 책임</a></li><li><a href="#t16">제16조 준거법과 분쟁 해결</a></li></ol></nav></details><article id="legal-body" tabindex="-1"><h2 id="t1">제1조 목적</h2>
 <p>이 약관은 에이엔에이치(A&amp;H)(이하 「운영자」)가 제공하는 홀리클럽(HolyClub) 앱(이하 「서비스」)의 이용 조건, 운영자와 이용자의 권리 · 의무, 계정과 게시물의 관리에 관한 사항을 정합니다.</p>
 <h2 id="t2">제2조 용어</h2>
 <ol>
@@ -86,25 +22,25 @@ mark{background:var(--mark);color:var(--markfg);padding:0 4px;border-radius:4px}
 <h2 id="t4">제4조 가입과 연령</h2>
 <ol>
 <li>만 14세 이상이면 가입할 수 있습니다. 만 14세 미만은 혼자 가입할 수 없습니다.</li>
-<li>가입할 때 만 14세 이상인지 본인이 직접 확인합니다. 운영자는 실명이나 생년월일을 확인하지 않습니다.</li>
+<li>가입할 때 만 14세 이상인지 본인이 직접 확인합니다. 이 선택은 연령 요건의 확인이며 실제 나이가 14세라는 의미가 아닙니다. 1차 출시에서 PASS·SOLAPI 본인확인을 사용하지 않습니다.</li>
 <li>만 14세 이상 만 19세 미만의 미성년자는 법정대리인(부모 등)의 동의를 받고 이용해 주세요.</li>
 <li>가입하려면 이메일 확인, 이 약관 · 개인정보 수집과 이용 · 민감정보(신앙에 관한 정보) 처리에 대한 동의, 처음 안내 단계를 마쳐야 합니다.</li>
 <li>다른 사람의 정보로 가입했거나 이전에 이 약관 위반으로 이용이 제한된 경우 가입을 거절할 수 있으며, 그 이유를 알립니다.</li>
 </ol>
 <h2 id="t5">제5조 로그인과 계정 관리</h2>
 <p>Android에서는 Google · Kakao · 이메일, iOS에서는 Google · Apple · Kakao · 이메일로 로그인할 수 있습니다. 각 로그인 제공자의 인증 절차에는 그 회사의 약관도 적용됩니다. 서비스는 이메일이 필요하며, Apple의 비공개 릴레이 이메일도 쓸 수 있습니다.</p>
-<p>로그인 수단이 다르면 다른 계정으로 취급되며, 자동으로 합쳐지지 않습니다. 비밀번호 · 인증번호는 다른 사람과 나누지 마세요. 운영자는 이메일 등으로 이를 묻지 않습니다. 계정이 도용된 것 같으면 바로 고객 지원에 알려 주세요.</p>
+<p>로그인 제공자와 확인된 이메일 등 인증 정보에 따라 같은 HolyClub 계정에 연결되거나 별도 계정으로 생성될 수 있습니다. 같은 사람이 여러 계정으로 보이거나 연결 상태가 다르면 고객 지원으로 문의해 주세요. 비밀번호 · 인증번호는 다른 사람과 나누지 마세요. 운영자는 이메일 등으로 이를 묻지 않습니다. 계정이 도용된 것 같으면 바로 고객 지원에 알려 주세요.</p>
 <h2 id="t6">제6조 제공하는 기능과 요금</h2>
 <p>서비스는 기도 · 성경 읽음 · 묵상과 노트 · 루틴 · 훈련 기록, 목표와 통계 · 연속 기록 · 점수 · 리그, 교회와 그룹 참여, 게시물 나눔과 신고 · 차단, 기기 알림, 위젯을 제공합니다. 기기 · 역할 · 설정에 따라 쓸 수 있는 범위가 다를 수 있습니다.</p>
 <p>서버에서 보내는 알림, iOS 실시간 현황(Live Activity), 기도 음악, 오늘의 QT, 말씀으로 나누기, 달란트, 새 자녀 추가, 기록 내려받기 메일은 <strong>준비 중</strong>이며, 언제 제공할지 약속하지 않습니다.</p>
 <p>서비스는 <strong>무료</strong>이며 앱 안의 유료 결제나 구독이 없습니다. 유료 기능을 도입하면 가격 · 결제 · 취소와 환불 조건을 미리 알리고 따로 동의를 받습니다.</p>
-<p>성경 본문은 갓피플성경 앱에서 제공되며, 홀리클럽은 읽음 기록만 관리합니다. 갓피플성경 앱이 없으면 설치 화면으로 안내합니다. 서비스는 의료 · 전문 상담 · 긴급 구조 서비스가 아닙니다. 위급한 상황에서는 112 · 119 또는 자살예방상담전화 109에 연락하세요.</p>
+<p>성경 본문은 갓피플성경 앱에서 제공되며, 홀리클럽은 읽음 기록만 관리합니다. 갓피플성경 앱이 없으면 설치 화면으로 안내합니다. 서비스는 의료·전문 상담·긴급 구조 서비스가 아닙니다. 위급한 상황에서는 112·119 또는 자살예방상담전화 <a href="tel:109">109</a>에 연락하세요.</p>
 <h2 id="t7">제7조 교회 · 그룹과 역할</h2>
 <p>교회나 그룹에 가입하지 않아도 개인 기록 기능을 쓸 수 있습니다. 그룹에는 초대 코드나 가입 신청으로 참여하며, 승인이 필요한 그룹은 리더가 승인해야 합니다. 초대 코드를 받았다고 리더 · 목자 권한이 생기지 않습니다.</p>
-<p>그룹에 가입하면 그 그룹 리더 · 목자의 화면에 회원의 루틴 완료 여부와 기도 시간이 보입니다. 「나만 보기」로 남긴 기도제목과 노트는 보이지 않습니다.</p>
+<p>그룹 참여와 공개 공유는 이용자가 선택하는 기능입니다. 그룹과 개인의 공개 설정에 따라 같은 그룹 멤버에게 오늘 루틴 완료 여부와 연속 기록이 보일 수 있습니다. 「연속만」에서는 완료 여부를 숨기며, 「익명 집계」에서는 개인 이름과 개별 기록을 표시하지 않습니다. 리더 · 목자에게 제공되는 정보도 해당 역할과 공개 범위의 권한 검사를 따릅니다. 「나만 보기」로 남긴 기도제목과 노트는 보이지 않습니다.</p>
 <p>권한을 우회하거나 다른 사람 이름으로 참여 · 승인해서는 안 됩니다. 그룹 운영에 관한 다툼이나 이의는 앱의 신고 기능이나 고객 지원으로 알려 주세요.</p>
 <h2 id="t8">제8조 기존 자녀 루틴</h2>
-<p>기존에 등록한 자녀의 루틴은 보호자 본인의 계정에서 관리합니다. 보호자는 자녀의 법정대리인으로서 자녀 정보를 관리하며, 다른 사람의 자녀 정보를 권한 없이 등록하거나 공개해서는 안 됩니다. 자녀 정보의 처리와 삭제는 개인정보처리방침 제9조를 따릅니다. 새 자녀 추가는 준비 중입니다.</p>
+<p>기존에 등록한 자녀의 루틴은 보호자 본인의 계정에서 관리합니다. 보호자는 자녀의 법정대리인으로서 자녀 정보를 관리하며, 다른 사람의 자녀 정보를 권한 없이 등록하거나 공개해서는 안 됩니다. 자녀 정보의 재확인은 보호자가 해당 재확인 화면을 처음 본 날부터 90일을 기준으로 하는 정책이며, 처리와 삭제는 개인정보처리방침 제9조를 따릅니다. 새 자녀 추가는 준비 중입니다.</p>
 <h2 id="t9">제9조 회원의 의무</h2>
 <p>회원은 다음 행위를 해서는 안 됩니다.</p>
 <ul>
@@ -122,28 +58,22 @@ mark{background:var(--mark);color:var(--markfg);padding:0 4px;border-radius:4px}
 <p>회원은 앱에서 게시물과 다른 회원을 신고하거나 차단할 수 있습니다. 운영자는 신고를 확인해 게시물 숨김 · 삭제, 기능 제한, 이용 정지 등 필요한 조치를 하고, 신고한 회원과 조치를 받은 회원에게 결과와 이의 제기 방법을 알립니다. 피해를 막기 위해 급히 조치해야 할 때는 먼저 조치하고 나중에 알릴 수 있습니다.</p>
 <p>조치에 이의가 있으면 알림을 받은 날부터 30일 안에 고객 지원으로 이의를 제기할 수 있으며, 운영자는 다시 검토해 10일 안에 결과를 알립니다.</p>
 <h2 id="t12">제12조 개인정보와 별도 동의</h2>
-<p>개인정보 처리는 <a href="/privacy/">개인정보처리방침</a>을 따릅니다. 신앙에 관한 정보는 이 약관과 따로 민감정보 처리 동의를 받습니다. 이 동의는 서비스의 핵심 기능에 꼭 필요하므로 동의하지 않으면 가입을 마칠 수 없습니다.</p>
-<p>회원은 언제든 이 동의를 철회할 수 있습니다. 철회하면 새 기록 · 그룹 이용 · 파일 올리기가 멈추고, 이미 남긴 기록은 본인만 볼 수 있게 남습니다. 철회한다고 기록이 자동으로 지워지지는 않으며, 지우려면 회원 탈퇴를 이용하세요.</p>
+<p>개인정보 처리는 <a href="https://holyclub.co.kr/privacy">개인정보처리방침</a> <span class="link-address">(https://holyclub.co.kr/privacy)</span>을 따릅니다. 신앙에 관한 정보는 이 약관과 따로 민감정보 처리 동의를 받습니다. 이 동의는 서비스의 핵심 기능에 꼭 필요하므로 동의하지 않으면 가입을 마칠 수 없습니다.</p>
+<p>회원은 언제든 이 동의를 철회할 수 있습니다. 철회하면 새 기록 · 그룹 이용 · 파일 올리기가 멈추고, 이미 남긴 기록은 본인만 볼 수 있게 남습니다. 철회만으로 기록이 즉시 자동 삭제되지는 않으며, 바로 지우려면 회원 탈퇴를 이용하세요. 철회 후 1년 동안 재동의나 탈퇴가 없으면 30일 전 안내 후 삭제하는 보유 상한 정책은 개인정보처리방침을 따릅니다.</p>
 <h2 id="t13">제13조 회원 탈퇴와 계정 삭제</h2>
 <p>회원은 앱의 <strong>설정 › 회원 탈퇴</strong>에서 언제든 탈퇴할 수 있습니다. 탈퇴를 신청하면 30일 동안 다시 로그인해 복구할 수 있고, 그 뒤 계정과 기록 · 게시물이 모두 삭제됩니다. 「즉시 완전 삭제」를 고르면 복구 기간 없이 바로 삭제됩니다. 죄와의 싸움 기록은 탈퇴 신청 즉시 삭제되어 복구되지 않습니다.</p>
-<p>앱에 들어갈 수 없으면 <a href="/delete-account/">계정 삭제 요청 페이지</a>에서 이메일로 요청할 수 있습니다. 삭제되는 정보와 예외는 개인정보처리방침 제4조 · 제8조에 적혀 있습니다.</p>
+<p>앱에 들어갈 수 없으면 <a href="https://holyclub.co.kr/delete-account">계정 삭제 요청 페이지</a> <span class="link-address">(https://holyclub.co.kr/delete-account)</span>에서 이메일로 요청할 수 있습니다. 이메일 요청은 가입된 이메일로 보낸 확인 메일에 대한 본인의 회신을 확인한 뒤, 30일 복구 기간 없이 즉시 완전 삭제로 처리합니다. 삭제되는 정보와 예외, Apple 측 연결 해제와 HolyClub 계정 삭제의 구분은 개인정보처리방침 제4조·제8조에 적혀 있습니다.</p>
 <h2 id="t14">제14조 알림과 고객 지원</h2>
-<p>운영자는 앱 공지와 홈페이지로 서비스 변경 · 장애 · 약관 변경을 알리고, 개별 안내가 필요하면 가입 이메일로 알립니다.</p>
+<p>운영자는 앱 공지와 홈페이지로 서비스 변경·장애·약관 변경을 알리고, 개별 안내가 필요하면 가입 이메일로 알립니다. 가입 확인·비밀번호 재설정 등 인증 이메일은 Resend를 통해 발송합니다. 수탁업체·국외 이전·보관 정보는 개인정보처리방침 제6조·제7조를 따릅니다.</p>
 <p>문의는 qqqtw963@gmail.com으로 받습니다. 접수 후 3영업일 안에 회신합니다. 오류를 알려 주실 때는 기기 종류 · 운영체제와 앱 버전 · 생긴 시각 · 재현 방법을 적어 주세요. 비밀번호 · 인증번호 · 로그인 토큰은 보내지 마세요.</p>
 <h2 id="t15">제15조 서비스 변경 · 중단과 책임</h2>
 <p>운영자는 점검 · 장애 · 보안 대응을 위해 서비스의 일부를 잠시 멈추거나 바꿀 수 있으며, 미리 알릴 수 있는 경우 미리 알립니다. 서비스를 종료할 때는 <strong>30일 전</strong>에 알리고, 종료일에 모든 개인정보를 삭제합니다.</p>
 <p>운영자는 고의 또는 과실로 회원에게 손해를 끼친 경우 관련 법령에 따라 책임을 집니다. 무료 서비스라는 이유로 이 책임을 면하지 않습니다. 다만 천재지변이나 회원의 귀책 사유, 갓피플성경 · 로그인 제공자 등 외부 서비스의 장애처럼 운영자가 막을 수 없었던 손해에는 책임을 지지 않습니다.</p>
 <h2 id="t16">제16조 준거법과 분쟁 해결</h2>
 <p>이 약관은 대한민국 법을 따릅니다. 분쟁이 생기면 먼저 고객 지원으로 해결을 요청해 주시고, 개인정보에 관한 분쟁은 개인정보분쟁조정위원회에 조정을 신청할 수도 있습니다. 소송은 「민사소송법」에 따른 관할 법원에 제기합니다.</p>
-<div class="footer">운영자 에이엔에이치(A&amp;H) · 대표 박경전 · 사업자등록번호 619-04-64596 · 인천광역시 서구 서달로 16, 103호(석남동) · qqqtw963@gmail.com<br>공고일 2026년 10월 26일 · 시행일 2026년 10월 26일 · 버전 v1.0</div>
-</main>
-<footer class="foot"><div class="in"><nav aria-label="바닥글"><a href="/privacy/">개인정보처리방침</a><a href="/terms/" aria-current="page">이용약관</a><a href="/support/">고객 지원</a><a href="/delete-account/">계정 삭제 요청</a></nav>
-<div>에이엔에이치(A&amp;H) · 대표 박경전 · 사업자등록번호 619-04-64596 · 인천광역시 서구 서달로 16, 103호(석남동) · <a href="mailto:qqqtw963@gmail.com">qqqtw963@gmail.com</a></div></div></footer>
-<script>
-document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
- var t=b.getAttribute('data-copy'),done=function(){var o=b.textContent;b.textContent='복사했어요';setTimeout(function(){b.textContent=o},1600)};
- if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){prompt('주소를 복사하세요',t)})}else{prompt('주소를 복사하세요',t)}
-})});
-</script>
-</body>
-</html>
+<div class="content-footer">
+<p>운영자 에이엔에이치(A&amp;H) · 대표 박경전 · 사업자등록번호 619-04-64596 · 인천광역시 서구 서달로 16, 103호(석남동) · qqqtw963@gmail.com 공고일 2026-10-15 · 시행일 2026-10-15 · 버전 <strong>v1.1</strong></p>
+</div></article></main>
+<footer><nav aria-label="바닥글"><a href="/privacy">개인정보처리방침</a><a href="/terms">이용약관</a><a href="/support">고객지원</a><a href="/delete-account">계정 삭제 요청</a></nav><p>에이엔에이치(A&amp;H) · 대표 박경전 · 사업자등록번호 619-04-64596</p>
+<p>인천광역시 서구 서달로 16, 103호(석남동) · <a href="mailto:qqqtw963@gmail.com">qqqtw963@gmail.com</a></p><a href="#legal-body">본문 처음으로</a><p><a href="/terms/versions/v1.0/">이전 v1.0 원문 보기</a></p></footer>
+<script type="application/json" id="holyclub-canonical-body">{"type": "terms_of_service", "version": "v1.1", "sha256": "35a99e6bf55d53a73679acf0c25891d33896d1d6f2eb480e9c7fc61fa87ec4bb", "text": "제1조 목적\n\n이 약관은 에이엔에이치(A&H)(이하 「운영자」)가 제공하는 홀리클럽(HolyClub) 앱(이하 「서비스」)의 이용 조건, 운영자와 이용자의 권리 · 의무, 계정과 게시물의 관리에 관한 사항을 정합니다.\n\n제2조 용어\n\n회원 — 가입 요건과 필요한 동의를 마치고 서비스를 이용하는 사람\n\n계정 — Google · Apple · Kakao 로그인 또는 이메일로 서비스를 이용하는 단위\n\n기록 — 기도 · 성경 읽음 · 묵상과 노트 · 루틴 · 훈련 등 회원이 남기거나 이용 중 생긴 자료\n\n게시물 — 회원이 「우리 그룹」 · 「전체 공개」 등으로 공유한 글 · 댓글 · 사진 · 반응\n\n그룹 · 리더 · 목자 — 서비스 안에서 정한 참여 범위와 권한. 실제 교회 직분이나 법적 권한을 인증한다는 뜻은 아닙니다.\n\n자녀 루틴 — 보호자 계정 안에서 기존에 등록한 자녀의 루틴을 관리하는 기능. 자녀의 회원 계정이 아닙니다.\n\n제3조 약관의 게시와 변경\n\n운영자는 이 약관을 가입 화면과 앱 설정, 홈페이지(holyclub.co.kr/terms)에 게시합니다. 약관을 바꾸면 바뀌는 내용 · 이유 · 시행일을 시행 7일 전부터, 회원에게 불리하거나 중요한 변경은 30일 전부터 앱 공지와 홈페이지에 알립니다. 중요한 변경은 앱에서 다시 동의를 받습니다.\n\n바뀐 약관에 동의하지 않으면 회원 탈퇴를 할 수 있습니다. 알린 기간 동안 아무 말이 없었다는 것만으로 동의한 것으로 보지 않는 변경은 따로 동의를 받습니다.\n\n제4조 가입과 연령\n\n만 14세 이상이면 가입할 수 있습니다. 만 14세 미만은 혼자 가입할 수 없습니다.\n\n가입할 때 만 14세 이상인지 본인이 직접 확인합니다. 이 선택은 연령 요건의 확인이며 실제 나이가 14세라는 의미가 아닙니다. 1차 출시에서 PASS·SOLAPI 본인확인을 사용하지 않습니다.\n\n만 14세 이상 만 19세 미만의 미성년자는 법정대리인(부모 등)의 동의를 받고 이용해 주세요.\n\n가입하려면 이메일 확인, 이 약관 · 개인정보 수집과 이용 · 민감정보(신앙에 관한 정보) 처리에 대한 동의, 처음 안내 단계를 마쳐야 합니다.\n\n다른 사람의 정보로 가입했거나 이전에 이 약관 위반으로 이용이 제한된 경우 가입을 거절할 수 있으며, 그 이유를 알립니다.\n\n제5조 로그인과 계정 관리\n\nAndroid에서는 Google · Kakao · 이메일, iOS에서는 Google · Apple · Kakao · 이메일로 로그인할 수 있습니다. 각 로그인 제공자의 인증 절차에는 그 회사의 약관도 적용됩니다. 서비스는 이메일이 필요하며, Apple의 비공개 릴레이 이메일도 쓸 수 있습니다.\n\n로그인 제공자와 확인된 이메일 등 인증 정보에 따라 같은 HolyClub 계정에 연결되거나 별도 계정으로 생성될 수 있습니다. 같은 사람이 여러 계정으로 보이거나 연결 상태가 다르면 고객 지원으로 문의해 주세요. 비밀번호 · 인증번호는 다른 사람과 나누지 마세요. 운영자는 이메일 등으로 이를 묻지 않습니다. 계정이 도용된 것 같으면 바로 고객 지원에 알려 주세요.\n\n제6조 제공하는 기능과 요금\n\n서비스는 기도 · 성경 읽음 · 묵상과 노트 · 루틴 · 훈련 기록, 목표와 통계 · 연속 기록 · 점수 · 리그, 교회와 그룹 참여, 게시물 나눔과 신고 · 차단, 기기 알림, 위젯을 제공합니다. 기기 · 역할 · 설정에 따라 쓸 수 있는 범위가 다를 수 있습니다.\n\n서버에서 보내는 알림, iOS 실시간 현황(Live Activity), 기도 음악, 오늘의 QT, 말씀으로 나누기, 달란트, 새 자녀 추가, 기록 내려받기 메일은 준비 중이며, 언제 제공할지 약속하지 않습니다.\n\n서비스는 무료이며 앱 안의 유료 결제나 구독이 없습니다. 유료 기능을 도입하면 가격 · 결제 · 취소와 환불 조건을 미리 알리고 따로 동의를 받습니다.\n\n성경 본문은 갓피플성경 앱에서 제공되며, 홀리클럽은 읽음 기록만 관리합니다. 갓피플성경 앱이 없으면 설치 화면으로 안내합니다. 서비스는 의료·전문 상담·긴급 구조 서비스가 아닙니다. 위급한 상황에서는 112·119 또는 자살예방상담전화 109에 연락하세요.\n\n제7조 교회 · 그룹과 역할\n\n교회나 그룹에 가입하지 않아도 개인 기록 기능을 쓸 수 있습니다. 그룹에는 초대 코드나 가입 신청으로 참여하며, 승인이 필요한 그룹은 리더가 승인해야 합니다. 초대 코드를 받았다고 리더 · 목자 권한이 생기지 않습니다.\n\n그룹 참여와 공개 공유는 이용자가 선택하는 기능입니다. 그룹과 개인의 공개 설정에 따라 같은 그룹 멤버에게 오늘 루틴 완료 여부와 연속 기록이 보일 수 있습니다. 「연속만」에서는 완료 여부를 숨기며, 「익명 집계」에서는 개인 이름과 개별 기록을 표시하지 않습니다. 리더 · 목자에게 제공되는 정보도 해당 역할과 공개 범위의 권한 검사를 따릅니다. 「나만 보기」로 남긴 기도제목과 노트는 보이지 않습니다.\n\n권한을 우회하거나 다른 사람 이름으로 참여 · 승인해서는 안 됩니다. 그룹 운영에 관한 다툼이나 이의는 앱의 신고 기능이나 고객 지원으로 알려 주세요.\n\n제8조 기존 자녀 루틴\n\n기존에 등록한 자녀의 루틴은 보호자 본인의 계정에서 관리합니다. 보호자는 자녀의 법정대리인으로서 자녀 정보를 관리하며, 다른 사람의 자녀 정보를 권한 없이 등록하거나 공개해서는 안 됩니다. 자녀 정보의 재확인은 보호자가 해당 재확인 화면을 처음 본 날부터 90일을 기준으로 하는 정책이며, 처리와 삭제는 개인정보처리방침 제9조를 따릅니다. 새 자녀 추가는 준비 중입니다.\n\n제9조 회원의 의무\n\n회원은 다음 행위를 해서는 안 됩니다.\n\n다른 사람의 계정이나 정보를 도용하거나, 권한 · 승인을 우회하거나, 서비스를 방해하는 행위\n\n다른 사람의 개인정보 · 민감한 정보 · 사진을 허락 없이 올리는 행위\n\n명예훼손 · 협박 · 괴롭힘 · 차별과 혐오 표현 · 음란물 · 불법 정보를 올리는 행위\n\n광고 · 스팸 · 사기, 신고 기능을 악용하는 행위\n\n저작권 등 다른 사람의 권리를 침해하는 자료를 올리는 행위\n\n제10조 기록과 게시물\n\n회원이 쓴 기록과 게시물의 권리는 회원에게 있습니다. 운영자는 저장 · 표시 · 회원이 고른 범위의 공유 · 신고 처리 등 서비스 제공에 필요한 범위에서만 이를 이용하며, 다른 목적으로 쓰거나 팔지 않습니다.\n\n게시물을 올릴 때 공개 범위를 확인해 주세요. 이름 일부를 가려도 내용으로 작성자를 알아볼 수 있고, 다른 회원이 이미 자기 기록으로 가져가거나 캡처한 것은 되돌릴 수 없습니다.\n\n회원이 탈퇴하면 운영자는 회원의 게시물을 본문까지 삭제합니다(개인정보처리방침 제8조).\n\n제11조 신고 · 차단과 이용 제한\n\n회원은 앱에서 게시물과 다른 회원을 신고하거나 차단할 수 있습니다. 운영자는 신고를 확인해 게시물 숨김 · 삭제, 기능 제한, 이용 정지 등 필요한 조치를 하고, 신고한 회원과 조치를 받은 회원에게 결과와 이의 제기 방법을 알립니다. 피해를 막기 위해 급히 조치해야 할 때는 먼저 조치하고 나중에 알릴 수 있습니다.\n\n조치에 이의가 있으면 알림을 받은 날부터 30일 안에 고객 지원으로 이의를 제기할 수 있으며, 운영자는 다시 검토해 10일 안에 결과를 알립니다.\n\n제12조 개인정보와 별도 동의\n\n개인정보 처리는 개인정보처리방침 (https://holyclub.co.kr/privacy)을 따릅니다. 신앙에 관한 정보는 이 약관과 따로 민감정보 처리 동의를 받습니다. 이 동의는 서비스의 핵심 기능에 꼭 필요하므로 동의하지 않으면 가입을 마칠 수 없습니다.\n\n회원은 언제든 이 동의를 철회할 수 있습니다. 철회하면 새 기록 · 그룹 이용 · 파일 올리기가 멈추고, 이미 남긴 기록은 본인만 볼 수 있게 남습니다. 철회만으로 기록이 즉시 자동 삭제되지는 않으며, 바로 지우려면 회원 탈퇴를 이용하세요. 철회 후 1년 동안 재동의나 탈퇴가 없으면 30일 전 안내 후 삭제하는 보유 상한 정책은 개인정보처리방침을 따릅니다.\n\n제13조 회원 탈퇴와 계정 삭제\n\n회원은 앱의 설정 › 회원 탈퇴에서 언제든 탈퇴할 수 있습니다. 탈퇴를 신청하면 30일 동안 다시 로그인해 복구할 수 있고, 그 뒤 계정과 기록 · 게시물이 모두 삭제됩니다. 「즉시 완전 삭제」를 고르면 복구 기간 없이 바로 삭제됩니다. 죄와의 싸움 기록은 탈퇴 신청 즉시 삭제되어 복구되지 않습니다.\n\n앱에 들어갈 수 없으면 계정 삭제 요청 페이지 (https://holyclub.co.kr/delete-account)에서 이메일로 요청할 수 있습니다. 이메일 요청은 가입된 이메일로 보낸 확인 메일에 대한 본인의 회신을 확인한 뒤, 30일 복구 기간 없이 즉시 완전 삭제로 처리합니다. 삭제되는 정보와 예외, Apple 측 연결 해제와 HolyClub 계정 삭제의 구분은 개인정보처리방침 제4조·제8조에 적혀 있습니다.\n\n제14조 알림과 고객 지원\n\n운영자는 앱 공지와 홈페이지로 서비스 변경·장애·약관 변경을 알리고, 개별 안내가 필요하면 가입 이메일로 알립니다. 가입 확인·비밀번호 재설정 등 인증 이메일은 Resend를 통해 발송합니다. 수탁업체·국외 이전·보관 정보는 개인정보처리방침 제6조·제7조를 따릅니다.\n\n문의는 qqqtw963@gmail.com으로 받습니다. 접수 후 3영업일 안에 회신합니다. 오류를 알려 주실 때는 기기 종류 · 운영체제와 앱 버전 · 생긴 시각 · 재현 방법을 적어 주세요. 비밀번호 · 인증번호 · 로그인 토큰은 보내지 마세요.\n\n제15조 서비스 변경 · 중단과 책임\n\n운영자는 점검 · 장애 · 보안 대응을 위해 서비스의 일부를 잠시 멈추거나 바꿀 수 있으며, 미리 알릴 수 있는 경우 미리 알립니다. 서비스를 종료할 때는 30일 전에 알리고, 종료일에 모든 개인정보를 삭제합니다.\n\n운영자는 고의 또는 과실로 회원에게 손해를 끼친 경우 관련 법령에 따라 책임을 집니다. 무료 서비스라는 이유로 이 책임을 면하지 않습니다. 다만 천재지변이나 회원의 귀책 사유, 갓피플성경 · 로그인 제공자 등 외부 서비스의 장애처럼 운영자가 막을 수 없었던 손해에는 책임을 지지 않습니다.\n\n제16조 준거법과 분쟁 해결\n\n이 약관은 대한민국 법을 따릅니다. 분쟁이 생기면 먼저 고객 지원으로 해결을 요청해 주시고, 개인정보에 관한 분쟁은 개인정보분쟁조정위원회에 조정을 신청할 수도 있습니다. 소송은 「민사소송법」에 따른 관할 법원에 제기합니다.\n\n운영자 에이엔에이치(A&H) · 대표 박경전 · 사업자등록번호 619-04-64596 · 인천광역시 서구 서달로 16, 103호(석남동) · qqqtw963@gmail.com 공고일 2026-10-15 · 시행일 2026-10-15 · 버전 v1.1\n"}</script></body></html>
