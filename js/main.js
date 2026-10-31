@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const homeSubtitle = document.querySelector('[data-home-subtitle]');
   const homeCta = document.querySelector('[data-home-cta]');
   const liveNotices = document.querySelector('[data-live-notices]');
+  // Public browser key only. This endpoint excludes private church/group/leader notices.
+  const publicNews = Object.freeze({"url":"https://brlttopntfhqixgbupry.supabase.co","publishableKey":"sb_publishable_Vdyr9aKs5bfbLMR8mZ9uAg_7gni8Tz0"});
+  let newsLoading = false;
 
   const resolveApiBaseUrl = () => {
     if (window.HOLYCLUB_API_BASE_URL) return window.HOLYCLUB_API_BASE_URL;
@@ -41,35 +44,94 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const normalizeApiUrl = (path) => `${apiBaseUrl.replace(/\/+$/, '')}/${String(path).replace(/^\/+/, '')}`;
 
-  const stripHtml = (value) => {
-    const temp = document.createElement('div');
-    temp.innerHTML = value || '';
-    return (temp.textContent || temp.innerText || '').trim();
-  };
-
   const truncate = (value, maxLength = 120) => {
     if (!value || value.length <= maxLength) return value;
     return `${value.slice(0, maxLength - 1)}…`;
   };
 
   const renderLiveNotices = (notices) => {
-    if (!liveNotices || !Array.isArray(notices) || notices.length === 0) return;
+    if (!liveNotices) return;
+    const cards = notices.slice(0, 3).map((notice) => {
+      const article = document.createElement('article');
+      article.className = 'feature feature--soft is-visible';
+      const icon = document.createElement('div');
+      icon.className = 'feature-icon';
+      icon.textContent = '공지';
+      const title = document.createElement('h3');
+      title.textContent = String(notice.title || '안내');
+      const text = String(notice.body || '').trim();
+      const excerpt = document.createElement('p');
+      excerpt.textContent = truncate(text, 110);
+      article.append(icon, title);
+      const published = new Date(notice.published_at);
+      if (Number.isFinite(published.getTime())) {
+        const time = document.createElement('time');
+        time.dateTime = published.toISOString();
+        time.textContent = published.toLocaleDateString('ko-KR', { timeZone: 'Asia/Seoul' });
+        article.append(time);
+      }
+      article.append(excerpt);
+      if (text.length > 110) {
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        summary.textContent = '전체 내용 보기';
+        summary.style.cursor = 'pointer';
+        const fullText = document.createElement('p');
+        fullText.textContent = text;
+        fullText.style.whiteSpace = 'pre-wrap';
+        details.append(summary, fullText);
+        article.append(details);
+      }
+      return article;
+    });
+    if (cards.length === 0) {
+      const empty = document.createElement('article');
+      empty.className = 'feature feature--soft is-visible';
+      const title = document.createElement('h3');
+      title.textContent = '아직 등록된 소식이 없습니다';
+      const description = document.createElement('p');
+      description.textContent = '새 소식이 올라오면 여기에 보여드릴게요.';
+      empty.append(title, description);
+      cards.push(empty);
+    }
+    liveNotices.replaceChildren(...cards);
+  };
 
-    liveNotices.innerHTML = notices
-      .slice(0, 3)
-      .map((notice) => {
-        const content = truncate(stripHtml(notice.content || notice.body || ''), 110);
-        return `
-          <article class="feature feature--soft" data-reveal>
-            <div class="feature-icon">공지</div>
-            <h3>${notice.title || '안내'}</h3>
-            <p>${content || '공지 내용을 불러오는 중입니다.'}</p>
-          </article>
-        `;
-      })
-      .join('');
-
-    liveNotices.querySelectorAll('[data-reveal]').forEach((item) => item.classList.add('is-visible'));
+  const fetchPublicNotices = async () => {
+    if (!liveNotices || newsLoading) return;
+    newsLoading = true;
+    liveNotices.setAttribute('aria-live', 'polite');
+    try {
+      const response = await fetch(`${publicNews.url}/rest/v1/rpc/get_public_church_news`, {
+        method: 'POST',
+        credentials: 'omit',
+        headers: { 'Content-Type': 'application/json', apikey: publicNews.publishableKey },
+        body: '{}',
+        signal: AbortSignal.timeout(10000),
+      });
+      if (!response.ok) throw new Error('public_news_unavailable');
+      const notices = await response.json();
+      if (!Array.isArray(notices) || notices.some((notice) => !notice || typeof notice !== 'object')) {
+        throw new Error('invalid_public_news');
+      }
+      renderLiveNotices(notices);
+    } catch (_) {
+      const article = document.createElement('article');
+      article.className = 'feature feature--soft is-visible';
+      const title = document.createElement('h3');
+      title.textContent = '소식을 불러오지 못했습니다';
+      const description = document.createElement('p');
+      description.textContent = '잠시 후 다시 시도해주세요.';
+      const retry = document.createElement('button');
+      retry.type = 'button';
+      retry.className = 'button button-secondary';
+      retry.textContent = '다시 불러오기';
+      retry.addEventListener('click', fetchPublicNotices);
+      article.append(title, description, retry);
+      liveNotices.replaceChildren(article);
+    } finally {
+      newsLoading = false;
+    }
   };
 
   const getContentValue = (content, camelKey, snakeKey) => content?.[camelKey] || content?.[snakeKey];
@@ -104,21 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const fetchRuntimeContent = async () => {
+  const fetchHomeContent = async () => {
     try {
-      const [homeResponse, noticeResponse] = await Promise.all([
-        fetch(normalizeApiUrl('/v1/home_content/current/')),
-        fetch(normalizeApiUrl('/v1/notification/?limit=3&offset=0')),
-      ]);
-
+      const homeResponse = await fetch(normalizeApiUrl('/v1/home_content/current/'), {
+        signal: AbortSignal.timeout(10000),
+      });
       if (homeResponse.ok) {
         const homeContent = await homeResponse.json();
         applyHomeContent(homeContent);
-      }
-
-      if (noticeResponse.ok) {
-        const noticePayload = await noticeResponse.json();
-        renderLiveNotices(noticePayload.results || []);
       }
     } catch (error) {
       console.warn('HolyClub live content fetch failed:', error);
@@ -159,5 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 
-  fetchRuntimeContent();
+  fetchHomeContent();
+  fetchPublicNotices();
 });
