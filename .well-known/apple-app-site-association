@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "details": [{
+      "appIDs": ["93994N3HHA.com.holyclub.app"],
+      "components": [
+        {"/": "/invite", "comment": "HolyClub group invitation"},
+        {"/": "/invite/", "comment": "HolyClub group invitation landing page"}
+      ]
+    }]
+  }
+}
