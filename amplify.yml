@@ -2,7 +2,10 @@ version: 1
 frontend:
   phases:
     build:
-      commands: []
+      commands:
+        # Amplify clean URLs resolve extensionless requests through .html files.
+        # customHttp.yml keeps this association response application/json.
+        - cp .well-known/apple-app-site-association .well-known/apple-app-site-association.html
   artifacts:
     baseDirectory: /
     files:
