@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.holyclub.app",
+      "sha256_cert_fingerprints": [
+        "4F:6B:39:BF:19:B9:B5:68:A0:DE:82:EC:67:33:A6:8A:52:26:CE:79:4B:F6:34:15:0E:C7:77:9E:52:59:5A:B7",
+        "86:2D:22:AD:BF:93:EB:D5:21:0B:72:C5:FD:F7:FF:5E:3C:E7:6C:6E:1C:26:53:31:66:FA:17:2F:34:F8:40:21",
+        "C1:A6:A0:11:48:A7:C2:46:74:47:A0:77:56:C8:9D:92:53:68:D2:7A:37:EC:3A:89:67:CF:4D:38:5F:5F:44:23"
+      ]
+    }
+  }
+]
